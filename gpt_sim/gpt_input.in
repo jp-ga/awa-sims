@@ -1,0 +1,60 @@
+GPTLICENSE = 1251405651;
+
+# Variable params
+n_particles = 262144;
+charge = 1e-9;
+gun_phase = 50.0;
+focusing_sol_i = 550.0;
+matching_sol_i = 200.0;
+laser_radius = 2.0e-3;
+
+# fixed params
+rf_frequency = 1.3e9;
+linac_amplitude = 10.66;
+linac_1_zc = 0.5769;  # center linac 1
+linac_2_zc = 3.3704;  # center linac 2
+linac_3_zc = 4.9384;  # center linac 3
+linac_5_zc = 8.4166;  # center linac 5
+linac_1_phase = -4.421664289283774;
+linac_2_phase = -5.182029243813386;
+linac_3_phase = -3.928470626173464;
+linac_5_phase = -4.459946021446758;
+
+
+# Intermediate Calcs
+initial_kinetic_energy = 1.4e-6; # MeV
+initial_gamma_beta = ((initial_kinetic_energy/0.5109989461 + 1)^2 - 1)^0.5;
+
+# Input beam set up
+setparticles("bunch0", n_particles, me, qe, -charge);
+setrxydist("bunch0", "*u", laser_radius/2, laser_radius);
+setphidist("bunch0", "*u", 0, 2*pi);
+setGBzdist("bunch0", "*u", initial_gamma_beta, 0);
+setGBthetadist("bunch0", "*u", pi/4, pi/2);
+setGBphidist("bunch0", "*u", 0, 2*pi);
+settdist("bunch0", "*f", "timeprofileW.gdf", "t", "Pt", 1, 0);
+
+# Beam line set up #
+# Gun
+map25D_TM("wcs", "I", "field/gun/gun.gdf", "R", "Z", "Er", "Ez", "H", 28.8, 0, (90.0+gun_phase)*pi/180.0, rf_frequency*2*pi);
+map2D_B("wcs", "I", "field/sol/BF_550.gdf", "R", "Z", "Br", "Bz", focusing_sol_i/550.0);
+map2D_B("wcs", "I", "field/sol/M_440.gdf", "R", "Z", "Br", "Bz", matching_sol_i/440.0);
+
+# Linacs
+map25D_TM("wcs","z", linac_1_position, "field\linac\dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_1_phase, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_2_position, "field\linac\dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_2_phase, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_3_position, "field\linac\dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_3_phase, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_5_position, "field\linac\dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_5_phase, rf_frequency*2*pi);
+
+# Beam effect set up
+spacecharge3dmesh("Cathode", "MeshAdapt", 0.5, "MeshBoxSize", 6.0);
+
+# Extra setup
+dtmax=1e-10;
+dtmin=1e-13;
+
+# screens
+from = 1e-3;
+to = 1.0;
+step = 1e-2;
+screen("wcs", "I", from, to, step);
