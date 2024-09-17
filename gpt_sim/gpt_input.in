@@ -9,6 +9,7 @@ matching_sol_i = 200.0;
 laser_radius = 2.0e-3;
 
 # fixed params
+data_path = "../../data/gpt/"
 rf_frequency = 1.3e9;
 linac_amplitude = 10.66;
 linac_1_zc = 0.5769;  # center linac 1
@@ -32,29 +33,35 @@ setphidist("bunch0", "*u", 0, 2*pi);
 setGBzdist("bunch0", "*u", initial_gamma_beta, 0);
 setGBthetadist("bunch0", "*u", pi/4, pi/2);
 setGBphidist("bunch0", "*u", 0, 2*pi);
-settdist("bunch0", "*f", "timeprofileW.gdf", "t", "Pt", 1, 0);
+settdist("bunch0", "*f", data_path+"timeprofileW.gdf", "t", "Pt", 1, 0);
 
 # Beam line set up #
 # Gun
-map25D_TM("wcs", "I", "field/gun/gun.gdf", "R", "Z", "Er", "Ez", "H", 28.8, 0, (90.0+gun_phase)*pi/180.0, rf_frequency*2*pi);
-map2D_B("wcs", "I", "field/sol/BF_550.gdf", "R", "Z", "Br", "Bz", focusing_sol_i/550.0);
-map2D_B("wcs", "I", "field/sol/M_440.gdf", "R", "Z", "Br", "Bz", matching_sol_i/440.0);
+map25D_TM("wcs", "I", data_path+"field/gun/gun.gdf", "R", "Z", "Er", "Ez", "H", 28.8, 0, (90.0+gun_phase)*pi/180.0, rf_frequency*2*pi);
+map2D_B("wcs", "I", data_path+"field/sol/BF_550.gdf", "R", "Z", "Br", "Bz", focusing_sol_i/550.0);
+map2D_B("wcs", "I", data_path+"field/sol/M_440.gdf", "R", "Z", "Br", "Bz", matching_sol_i/440.0);
 
 # Linacs
-map25D_TM("wcs","z", linac_1_position, "field\linac\dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_1_phase, rf_frequency*2*pi);
-map25D_TM("wcs","z", linac_2_position, "field\linac\dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_2_phase, rf_frequency*2*pi);
-map25D_TM("wcs","z", linac_3_position, "field\linac\dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_3_phase, rf_frequency*2*pi);
-map25D_TM("wcs","z", linac_5_position, "field\linac\dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_5_phase, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_1_position, data_path+"field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_1_phase, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_2_position, data_path+"field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_2_phase, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_3_position, data_path+"field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_3_phase, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_5_position, data_path+"field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_5_phase, rf_frequency*2*pi);
 
 # Beam effect set up
-spacecharge3dmesh("Cathode", "MeshAdapt", 0.5, "MeshBoxSize", 6.0);
+# spacecharge3dmesh("Cathode", "MeshAdapt", 0.5, "MeshBoxSize", 6.0);
 
 # Extra setup
 dtmax=1e-10;
 dtmin=1e-13;
 
 # screens
-from = 1e-3;
-to = 1.0;
-step = 1e-2;
-screen("wcs", "I", from, to, step);
+#from = 1e-3;
+#to = 1.0;
+#step = 1e-2;
+#screen("wcs", "I", from, to, step);
+
+#snapshots
+from = 1e-10;
+to = 1e-8;
+step = 1e-9;
+snapshot(from, to, step)
