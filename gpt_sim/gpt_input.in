@@ -2,7 +2,7 @@ GPTLICENSE = 1251405651;
 
 # Variable params
 n_particles = 262144;
-charge = 10.0e-9;
+charge = 1.0e-9;
 gun_phase = 50.0;
 focusing_sol_i = 550.0;
 matching_sol_i = 200.0;
@@ -54,15 +54,11 @@ spacecharge3dmesh("Cathode", "MeshAdapt", 0.5, "MeshBoxSize", 6.0);
 dtmax=1e-10;
 dtmin=1e-13;
 
-# screens
-#from = 1e-3;
-#to = 1.0;
-#step = 1e-2;
-#screen("wcs", "I", from, to, step);
+# cathode screen
+screen("wcs", "I", 0.001);
 
-#snapshots
-snapshot(0); 
-from = 1e-10;
+# snapshots 
+from = 0.0;
 to = 4e-8;
-step = 1e-9;
+step = 0.5e-9;
 snapshot(from, to, step);
