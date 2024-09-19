@@ -47,17 +47,18 @@ map25D_TM("wcs","z", linac_2_position, "../../data/gpt/field/linac/dlinac.gdf", 
 map25D_TM("wcs","z", linac_3_position, "../../data/gpt/field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_3_phase, rf_frequency*2*pi);
 map25D_TM("wcs","z", linac_5_position, "../../data/gpt/field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_5_phase, rf_frequency*2*pi);
 
-# Beam effect set up
+# Spacecharge setup
 spacecharge3dmesh("Cathode", "MeshAdapt", 0.5, "MeshBoxSize", 6.0);
 
-# Extra setup
+# Timestep setup
 dtmax=1e-10;
 dtmin=1e-13;
 
-# cathode screen
-screen("wcs", "I", 0.001);
+# Screens
+screen("wcs", "I", 0.001); # cathode
+screen("wcs", "I", 11.372); # YAG4
 
-# snapshots 
+# Snapshots 
 from = 0.0;
 to = 4e-8;
 step = 0.5e-9;

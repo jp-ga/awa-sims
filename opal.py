@@ -78,45 +78,19 @@ def modify_stat_file(file_path):
         for line in modified_lines:
             file.write(line + '\n')
 
-def get_screen_from_h5(h5_path: str) -> dict:
-    """"Get screen coordinates from an OPAL h5 file."""
+def load_single_screen(h5_path: str) -> dict:
+    """"Get screen coordinates from an OPAL single screen h5 file."""
     with h5py.File(h5_path, 'r') as f:
-        x = f['Step#0']['x'][:]
-        y = f['Step#0']['y'][:]
-        z = f['Step#0']['z'][:]
-        px = f['Step#0']['px'][:]
-        py = f['Step#0']['py'][:]
-        pz = f['Step#0']['pz'][:]
-        t = f['Step#0']['time'][:]
-        screen = {
-            'x': x,
-            'y': y,
-            'z': z,
-            'px': px,
-            'py': py,
-            'pz': pz,
-            't': t,
+        dataset = f['Step#0']
+        data_dict = {
+            'data': {},
+            'attributes': {},
         }
-    return screen
-
-def get_phasespace_from_h5(h5_path: str) -> dict:
-    """"Get screen coordinates from an OPAL h5 file."""
-    with h5py.File(h5_path, 'r') as f:
-        x = f['Step#0']['x'][:]
-        y = f['Step#0']['y'][:]
-        z = f['Step#0']['z'][:]
-        px = f['Step#0']['px'][:]
-        py = f['Step#0']['py'][:]
-        pz = f['Step#0']['pz'][:]
-        phasespace = {
-            'x': x,
-            'y': y,
-            'z': z,
-            'px': px,
-            'py': py,
-            'pz': pz,
-        }
-    return phasespace
+        for key in dataset.keys():
+            data_dict['data'][key] = dataset[key][()]
+        for key in dataset.attrs.keys():
+            data_dict['attributes'][key] = dataset.attrs[key]
+    return data_dict
 
 def get_coords_from_h5(h5_path: str) -> dict:
     """"Get Bmad-X coordinates from an OPAL h5 file."""

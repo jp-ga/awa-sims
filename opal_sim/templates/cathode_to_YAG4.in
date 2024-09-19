@@ -14,9 +14,6 @@ REAL sol_focusing_i = {{sol_focusing_i}};  // [A] focusing solenoid current
 REAL sol_matching_i = {{sol_matching_i}};  // [A] matching solenoid current
 REAL gun_phase = {{gun_phase}};  // [deg] gun phase offset from on-crest
 REAL linac_phase = {{linac_phase}};  // [deg] linac phase offset from on-crest
-REAL linac_1_sol_i = {{linac_1_sol_i}};  // [A] linac 1 solenoid current
-REAL linac_2_sol_i = {{linac_2_sol_i}};  // [A] linac 2 solenoid current
-REAL linac_3_sol_i = {{linac_3_sol_i}};  // [A] linac 3 solenoid current
 REAL dq4_k1 = {{dq4_k1}};  // [T/m] DQ4 K1 (negative focuses on x)
 REAL dq5_k1 = {{dq5_k1}};  // [T/m] DQ5 K1
 REAL dq6_k1 = {{dq6_k1}};  // [T/m] DQ6 K1
@@ -222,29 +219,6 @@ linac_5: RFCAVITY,
     TYPE = "STANDING",
     FREQ = linac_freq;
 
-// linac solenoids (DS4 and DS5)
-
-REAL linac_sol_len = 1.0;  // axial length of the 2D map 
-
-sol_linac_1: SOLENOID, 
-    ORIGIN = {0.0, 0.0, 2.0769 - linac_sol_len/2.},
-    L = linac_sol_len, 
-    KS = linac_1_sol_i/304.7875*0.451972, 
-    FMAPFN = "${path_fieldmaps2d}/DS4.T7"; 
-
-sol_linac_2: SOLENOID, 
-    ORIGIN = {0.0, 0.0, 4.7099 - linac_sol_len/2.},
-    L = linac_sol_len, 
-    KS = linac_2_sol_i/330.0*0.500875, 
-    FMAPFN = "${path_fieldmaps2d}/DS5.T7";
-   
-sol_linac_3: SOLENOID, 
-    ORIGIN = {0.0, 0.0, 6.7766 - linac_sol_len/2.},
-    L = linac_sol_len, 
-    KS = linac_3_sol_i/330.0*0.500875, 
-    FMAPFN = "${path_fieldmaps2d}/DS5.T7";
-    
-
 //--------------------------
 // Screens
 //--------------------------
@@ -262,7 +236,7 @@ YAG4: MONITOR,
 //--------------------------
 
 line_injector: LINE = (cathode, screen_cathode, gun, sol_focusing, sol_matching); 
-line_linac: LINE = (linac_1, sol_linac_1, linac_2, sol_linac_2, linac_3, sol_linac_3, linac_5);
+line_linac: LINE = (linac_1, linac_2, linac_3, linac_5);
 line_cathode_to_YAG4: LINE = (line_injector, line_linac, YAG4); 
 
 //--------------------------
