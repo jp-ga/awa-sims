@@ -49,7 +49,10 @@ map25D_TM("wcs","z", linac_3_position, "../../data/gpt/field/linac/dlinac.gdf", 
 map25D_TM("wcs","z", linac_5_position, "../../data/gpt/field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_5_crest_phase + linacphase*pi/180, rf_frequency*2*pi);
 
 # Spacecharge setup
-spacecharge3dmesh("Cathode", "MeshAdapt", 0.5, "MeshBoxSize", 6.0);
+if( charge!=0 ) spacecharge3dmesh("Cathode", "MeshAdapt", 0.5, "MeshBoxSize", 6.0);
+
+# Timestep setup
+dtmax=1e-10;
 
 # Screens
 screen("wcs", "I", 0.001); # cathode
