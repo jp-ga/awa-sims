@@ -44,9 +44,11 @@ for stat in stats:
     stats_string += f'{stat} '
 
 cmd_str = f"""
+echo "-----------------------------------------------------Slots available..."
+echo $NSLOTS
 cd {run_dir}
 echo "-----------------------------------------------------Running GPT simulation..."
-gpt -v -j 1 -o {save_dir}/out.gdf gpt.in {variables_string} | tee {save_dir}/out.log
+gpt -v -j 4 -o {save_dir}/out.gdf gpt.in {variables_string} | tee {save_dir}/out.log
 echo "-----------------------------------------------------Running GDFA snapshot stats..."
 gdfa -o {save_dir}/stats_t.gdf {save_dir}/out.gdf time {stats_string}
 echo "-----------------------------------------------------Running GDFA screen stats..."
