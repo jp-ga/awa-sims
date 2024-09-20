@@ -1,0 +1,10 @@
+# params for GPT simulation
+---
+solfocusingi: 550.0
+solmatchingi: 200.0
+gunphase: 50.0
+linacphase: -10.0
+laserradius: 0.002
+charge: 1.0e-9
+nparticles: 262144
+...

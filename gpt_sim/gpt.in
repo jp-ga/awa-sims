@@ -1,0 +1,62 @@
+GPTLICENSE = 1251405651;
+
+# Variable params
+# solfocusingi = 550.0;  # [A]
+# solmatchingi = 200.0;  # [A]
+# gunphase = 50.0;  # [deg]
+# linacphase = -10;  # [deg]
+# laserradius = 0.002;  # [m]
+# charge = 1.0e-9;  # [C]
+# nparticles = 262144;
+
+# fixed params
+rf_frequency = 1.3e9;
+gun_amplitude = 28.8; 
+linac_amplitude = 10.66;
+linac_1_position = 0.5769;  # center linac 1
+linac_2_position = 3.3704;  # center linac 2
+linac_3_position = 4.9384;  # center linac 3
+linac_5_position = 8.4166;  # center linac 5
+linac_1_crest_phase = -4.421664289283774 + 10.0*pi/180;
+linac_2_crest_phase = -5.182029243813386 + 10.0*pi/180;
+linac_3_crest_phase = -3.928470626173464 + 10.0*pi/180;
+linac_5_crest_phase = -4.459946021446758 + 10.0*pi/180;
+
+
+# Intermediate Calcs
+initial_kinetic_energy = 1.4e-6; # MeV
+initial_gamma_beta = ((initial_kinetic_energy/0.5109989461 + 1)^2 - 1)^0.5;
+
+# Input beam set up
+setparticles("bunch0", nparticles, me, qe, -charge);
+setrxydist("bunch0", "*u", laserradius/2, laserradius);
+setphidist("bunch0", "*u", 0, 2*pi);
+setGBzdist("bunch0", "*u", initial_gamma_beta, 0);
+setGBthetadist("bunch0", "*u", pi/4, pi/2);
+setGBphidist("bunch0", "*u", 0, 2*pi);
+settdist("bunch0", "*f", "../../data/gpt/timeprofileW.gdf", "t", "Pt", 1, 0);
+
+# Beam line set up #
+# Gun
+map25D_TM("wcs", "I", "../../data/gpt/field/gun/gun.gdf", "R", "Z", "Er", "Ez", "H", gun_amplitude, 0, (90.0+gunphase)*pi/180.0, rf_frequency*2*pi);
+map2D_B("wcs", "I", "../../data/gpt/field/sol/BF_550.gdf", "R", "Z", "Br", "Bz", solfocusingi/550.0);
+map2D_B("wcs", "I", "../../data/gpt/field/sol/M_440.gdf", "R", "Z", "Br", "Bz", solmatchingi/440.0);
+
+# Linacs
+map25D_TM("wcs","z", linac_1_position, "../../data/gpt/field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_1_crest_phase + linacphase*pi/180, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_2_position, "../../data/gpt/field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_2_crest_phase + linacphase*pi/180, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_3_position, "../../data/gpt/field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_3_crest_phase + linacphase*pi/180, rf_frequency*2*pi);
+map25D_TM("wcs","z", linac_5_position, "../../data/gpt/field/linac/dlinac.gdf", "R", "Z", "Er", "Ez", "H", linac_amplitude, 0, linac_5_crest_phase + linacphase*pi/180, rf_frequency*2*pi);
+
+# Spacecharge setup
+spacecharge3dmesh("Cathode", "MeshAdapt", 0.5, "MeshBoxSize", 6.0);
+
+# Screens
+screen("wcs", "I", 0.001); # cathode
+screen("wcs", "I", 11.372); # YAG4
+
+# Snapshots 
+from = 0.0;
+to = 4e-8;
+step = 0.5e-9;
+snapshot(from, to, step);
