@@ -8,7 +8,9 @@ C_LIGHT = 2.99792458e8  # m/s
 
 template_last_screen = {
     'cathode_to_YAG4.in': 'YAG4.h5',
+    'cathode_to_YAG5.in': 'YAG5.h5',
     'cathode_to_EYG5.in': 'EYG5.h5',
+    'cathode_to_rquad_midpoint.in': 'RQUAD_MIDPOINT_SCREEN.h5',
 }
 
 # Setup:
@@ -90,6 +92,7 @@ def load_single_screen(h5_path: str) -> dict:
             data_dict['data'][key] = dataset[key][()]
         for key in dataset.attrs.keys():
             data_dict['attributes'][key] = dataset.attrs[key]
+        data_dict['data']['time'] = data_dict['data']['time'] - data_dict['data']['time'].mean()
     return data_dict
 
 def get_coords_from_h5(h5_path: str) -> dict:
@@ -151,18 +154,22 @@ def evaluate_opal_awa(params) -> dict:
     coords = get_coords_from_h5(screen_file)
     std_x = coords['x'].std()
     std_y = coords['y'].std()
+    std_px = coords['px'].std()
+    std_py = coords['py'].std()
     std_z = coords['z'].std()
     beam_size = (std_x**2 + std_y**2)**0.5
     beam_size_3d = (std_x**2 + std_y**2 + (10*std_z)**2)**0.5
-    particle_loss = (params['n_particles'] - len(coords['x'])) / params['n_particles']
+    #particle_loss = (params['n_particles'] - len(coords['x'])) / params['n_particles']
     p0c = coords['p0c']
     output = {
         'std_x': std_x,
         'std_y': std_y,
         'std_z': std_z,
+        'std_px': std_px,
+        'std_py': std_py,
         'beam_size': beam_size,
         'beam_size_3d': beam_size_3d,
-        'particle_loss': particle_loss,
+    #    'particle_loss': particle_loss,
         'p0c': p0c
     }
     return output

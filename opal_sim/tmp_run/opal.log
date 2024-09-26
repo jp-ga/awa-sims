@@ -1,0 +1,1556 @@
+OPAL{0}>                ____  _____       ___ 
+OPAL{0}>               / __ \|  __ \ /\   | | 
+OPAL{0}>              | |  | | |__) /  \  | |
+OPAL{0}>              | |  | |  ___/ /\ \ | |
+OPAL{0}>              | |__| | |  / ____ \| |____
+OPAL{0}>               \____/|_| /_/    \_\______|
+OPAL{0}> 
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2022.1.0
+OPAL{0}>             git rev. a4e0e14466557289b4f7a843fb9eb72700ff1992
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}>                      (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}> The optimiser (former opt-Pilot) is integrated 
+OPAL{0}> 
+OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL{0}> to the OPAL developers opal@lists.psi.ch
+OPAL{0}> 
+OPAL{0}> Time: 16:21:48 date: 26/09/2024
+OPAL{0}> 
+OPAL{0}> * Reading input stream 'input.in'
+OPAL{0}> * ************* W A K E ************************************************************
+OPAL{0}> OpalWake::initWakefunction for element ED1
+OPAL{0}> * **********************************************************************************
+OPAL{0}> * ************* F I L T E R ************************************************************
+OPAL{0}> OpalFilter::initOpalFilterfunction 
+OPAL{0}> * **********************************************************************************
+OPAL{0}> * ************* W A K E ************************************************************
+OPAL{0}> OpalWake::initWakefunction for element ED2
+OPAL{0}> * **********************************************************************************
+OPAL{0}> * ************* W A K E ************************************************************
+OPAL{0}> OpalWake::initWakefunction for element ED3
+OPAL{0}> * **********************************************************************************
+OPAL{0}> * ************* W A K E ************************************************************
+OPAL{0}> OpalWake::initWakefunction for element ED4
+OPAL{0}> * **********************************************************************************
+OPAL{0}> 
+OPAL{0}> * ************* T R A C K  R U N *************************************************** 
+OPAL{0}> * Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> * Phase space dump frequency    = 100000000
+OPAL{0}> * Statistics dump frequency     = 10 w.r.t. the time step.
+OPAL{0}> * DT                            = 1e-12 [s]
+OPAL{0}> * MAXSTEPS                      = 1000000
+OPAL{0}> * Mass of simulation particle   = 12.1666 [GeV/c^2]
+OPAL{0}> * Charge of simulation particle = -3.8147e-15 [C]
+OPAL{0}> * ********************************************************************************** 
+Ippl{0}> * Creating new file for data: 'input.stat'
+Ippl{0}> * Creating new file for data: 'input.lbal'
+OPAL{0}> 
+OPAL{0}> * ************* D I S T R I B U T I O N ********************************************
+OPAL{0}> * 
+OPAL{0}> * Number of particles: 262144
+OPAL{0}> * 
+OPAL{0}> * Distribution input momentum units: [Beta Gamma]
+OPAL{0}> * 
+OPAL{0}> * Distribution type: FLATTOP
+OPAL{0}> * 
+OPAL{0}> * SIGMAX                        = 2.000000e-03 [m]
+OPAL{0}> * SIGMAY                        = 2.000000e-03 [m]
+OPAL{0}> * Sigma Time Rise               = 1.276579e-13 [sec]
+OPAL{0}> * TPULSEFWHM                    = 8.000000e-12 [sec]
+OPAL{0}> * Sigma Time Fall               = 1.276579e-13 [sec]
+OPAL{0}> * Longitudinal cutoff           = 4.000000e+00 [units of Sigma Time]
+OPAL{0}> * Flat top modulation amplitude = 0.000000e+00 [Percent of distribution amplitude]
+OPAL{0}> * Flat top modulation periods   = 0.000000e+00
+OPAL{0}> * 
+OPAL{0}> * Number of energy bins    = 5
+OPAL{0}> * Distribution is emitted. 
+OPAL{0}> * Emission time            = 8.720652e-12 [sec]
+OPAL{0}> * Time per bin             = 1.744130e-12 [sec]
+OPAL{0}> * Delta t during emission  = 1.744130e-14 [sec]
+OPAL{0}> * 
+OPAL{0}> * ------------- THERMAL EMITTANCE MODEL --------------------------------------------
+OPAL{0}> *  THERMAL EMITTANCE in ASTRA MODE
+OPAL{0}> *  Kinetic energy (thermal emittance) = 1.400000e+00 [eV]  
+OPAL{0}> * ----------------------------------------------------------------------------------
+OPAL{0}> *
+OPAL{0}> * Write initial distribution to file 'data/input_DIST_1.dat'
+OPAL{0}> * 
+OPAL{0}> * **********************************************************************************
+OPAL{0}> 
+OPAL{0}> * ************* B E A M ************************************************************ 
+OPAL{0}> * BEAM        BEAM_1
+OPAL{0}> * PARTICLE    ELECTRON
+OPAL{0}> * REST MASS   5.109990e-04 [GeV]
+OPAL{0}> * CHARGE      -e * 1.000000e+00 
+OPAL{0}> * MOMENTUM    1.196160e+03 [eV/c]
+OPAL{0}> * CURRENT     1.300000e+00 [A]
+OPAL{0}> * FREQUENCY   1.300000e+03 [MHz]
+OPAL{0}> * NPART       2.621440e+05
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL{0}> * FIELDSOLVER  FIELD_SOLVER_1
+OPAL{0}> * TYPE         FFT
+OPAL{0}> * N-PROCESSORS 4
+OPAL{0}> * MX           3.200000e+01
+OPAL{0}> * MY           3.200000e+01
+OPAL{0}> * MT           3.200000e+01
+OPAL{0}> * BBOXINCR     1.000000e+00
+OPAL{0}> * GREENSF      INTEGRATED
+OPAL{0}> * XDIM         parallel  
+OPAL{0}> * YDIM         parallel  
+OPAL{0}> * Z(T)DIM      parallel  
+OPAL{0}> 
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+Ippl{0}> 
+Ippl{0}> * ************* G U N **************************************************************
+Ippl{0}> >>>>>> APVETO >>>>>> 
+Ippl{0}> GUN_phi = 140.0000 [deg], corresp. in Astra = 90.0000 [deg],
+Ippl{0}> E = 6.4152 [MeV], phi_nom = 140.0000 [deg]
+Ippl{0}> Ez_0 = 61.2600 [MV/m]
+Ippl{0}> time = 0.0000 [ns], dt = 1.0000 [ps]
+Ippl{0}>  <<<<<< APVETO <<<<<< 
+Ippl{0}> * **********************************************************************************
+Ippl{0}> 
+Ippl{0}> 
+Ippl{0}> * ************* L I N A C _ 1 ******************************************************
+Ippl{0}> LINAC_1_phi = 305.9601 [deg], corresp. in Astra = 207.3102 [deg],
+Ippl{0}> E = 15.2704 [MeV], phi_nom = -10.0000 [deg]
+Ippl{0}> Ez_0 = 22.0600 [MV/m]
+Ippl{0}> time = 1.9629 [ns], dt = 1.0000 [ps]
+Ippl{0}> * **********************************************************************************
+Ippl{0}> 
+Ippl{0}> 
+Ippl{0}> * ************* L I N A C _ 2 ******************************************************
+Ippl{0}> LINAC_2_phi = 307.3733 [deg], corresp. in Astra = 165.5221 [deg],
+Ippl{0}> E = 24.1375 [MeV], phi_nom = -10.0000 [deg]
+Ippl{0}> Ez_0 = 22.0600 [MV/m]
+Ippl{0}> time = 11.2860 [ns], dt = 1.0000 [ps]
+Ippl{0}> * **********************************************************************************
+Ippl{0}> 
+Ippl{0}> 
+Ippl{0}> * ************* L I N A C _ 3 ******************************************************
+Ippl{0}> LINAC_3_phi = 307.6032 [deg], corresp. in Astra = 237.1963 [deg],
+Ippl{0}> E = 33.0071 [MeV], phi_nom = -10.0000 [deg]
+Ippl{0}> Ez_0 = 22.0600 [MV/m]
+Ippl{0}> time = 16.5180 [ns], dt = 1.0000 [ps]
+Ippl{0}> * **********************************************************************************
+Ippl{0}> 
+Ippl{0}> 
+Ippl{0}> * ************* L I N A C _ 5 ******************************************************
+Ippl{0}> LINAC_5_phi = 307.6813 [deg], corresp. in Astra = 220.8598 [deg],
+Ippl{0}> E = 41.8776 [MeV], phi_nom = -10.0000 [deg]
+Ippl{0}> Ez_0 = 22.0600 [MV/m]
+Ippl{0}> time = 28.0915 [ns], dt = 1.0000 [ps]
+Ippl{0}> * **********************************************************************************
+Ippl{0}> 
+OPAL{0}> 
+OPAL{0}> * Size of map 39 sections 
+OPAL{0}> * Key: ( 0.000000 -  0.006034) number of overlapping elements 5
+OPAL{0}> *                              SCREEN_CATHODE
+OPAL{0}> *                              GUN
+OPAL{0}> *                              SOL_FOCUSING
+OPAL{0}> *                              SOL_MATCHING
+OPAL{0}> *                              CATHODE
+OPAL{0}> * Key: ( 0.006034 -  0.049859) number of overlapping elements 4
+OPAL{0}> *                              GUN
+OPAL{0}> *                              SOL_FOCUSING
+OPAL{0}> *                              SOL_MATCHING
+OPAL{0}> *                              CATHODE
+OPAL{0}> * Key: ( 0.049859 -  0.292830) number of overlapping elements 3
+OPAL{0}> *                              GUN
+OPAL{0}> *                              SOL_FOCUSING
+OPAL{0}> *                              SOL_MATCHING
+OPAL{0}> * Key: ( 0.292830 -  0.485969) number of overlapping elements 2
+OPAL{0}> *                              SOL_FOCUSING
+OPAL{0}> *                              SOL_MATCHING
+OPAL{0}> * Key: ( 0.485969 -  0.577455) number of overlapping elements 0
+OPAL{0}> * Key: ( 0.577455 -  1.784562) number of overlapping elements 1
+OPAL{0}> *                              LINAC_1
+OPAL{0}> * Key: ( 1.784562 -  3.369932) number of overlapping elements 0
+OPAL{0}> * Key: ( 3.369932 -  4.577073) number of overlapping elements 1
+OPAL{0}> *                              LINAC_2
+OPAL{0}> * Key: ( 4.577073 -  4.937945) number of overlapping elements 0
+OPAL{0}> * Key: ( 4.937945 -  6.145014) number of overlapping elements 1
+OPAL{0}> *                              LINAC_3
+OPAL{0}> * Key: ( 6.145014 -  8.406985) number of overlapping elements 0
+OPAL{0}> * Key: ( 8.406985 -  9.614137) number of overlapping elements 1
+OPAL{0}> *                              LINAC_5
+OPAL{0}> * Key: ( 9.614137 - 11.366896) number of overlapping elements 0
+OPAL{0}> * Key: (11.366896 - 11.377088) number of overlapping elements 1
+OPAL{0}> *                              YAG4
+OPAL{0}> * Key: (11.377088 - 13.740181) number of overlapping elements 0
+OPAL{0}> * Key: (13.740181 - 13.860089) number of overlapping elements 1
+OPAL{0}> *                              DQ4
+OPAL{0}> * Key: (13.860089 - 14.005178) number of overlapping elements 0
+OPAL{0}> * Key: (14.005178 - 14.125086) number of overlapping elements 1
+OPAL{0}> *                              DQ5
+OPAL{0}> * Key: (14.125086 - 14.255187) number of overlapping elements 0
+OPAL{0}> * Key: (14.255187 - 14.375095) number of overlapping elements 1
+OPAL{0}> *                              DQ6
+OPAL{0}> * Key: (14.375095 - 14.525280) number of overlapping elements 0
+OPAL{0}> * Key: (14.525280 - 14.645188) number of overlapping elements 1
+OPAL{0}> *                              DQ7
+OPAL{0}> * Key: (14.645188 - 14.760300) number of overlapping elements 0
+OPAL{0}> * Key: (14.760300 - 14.770193) number of overlapping elements 1
+OPAL{0}> *                              YAG5
+OPAL{0}> * Key: (14.770193 - 15.187174) number of overlapping elements 0
+OPAL{0}> * Key: (15.187174 - 16.009145) number of overlapping elements 1
+OPAL{0}> *                              ED1
+OPAL{0}> * Key: (16.009145 - 16.976804) number of overlapping elements 0
+OPAL{0}> * Key: (16.976804 - 17.633602) number of overlapping elements 1
+OPAL{0}> *                              ED2
+OPAL{0}> * Key: (17.633602 - 17.733725) number of overlapping elements 2
+OPAL{0}> *                              RQ1
+OPAL{0}> *                              ED2
+OPAL{0}> * Key: (17.733725 - 17.798776) number of overlapping elements 1
+OPAL{0}> *                              ED2
+OPAL{0}> * Key: (17.798776 - 18.899234) number of overlapping elements 0
+OPAL{0}> * Key: (18.899234 - 18.964284) number of overlapping elements 1
+OPAL{0}> *                              ED3
+OPAL{0}> * Key: (18.964284 - 19.064108) number of overlapping elements 2
+OPAL{0}> *                              RQ2
+OPAL{0}> *                              ED3
+OPAL{0}> * Key: (19.064108 - 19.721205) number of overlapping elements 1
+OPAL{0}> *                              ED3
+OPAL{0}> * Key: (19.721205 - 20.688565) number of overlapping elements 0
+OPAL{0}> * Key: (20.688565 - 21.510536) number of overlapping elements 1
+OPAL{0}> *                              ED4
+OPAL{0}> * Key: (21.510536 - 21.655625) number of overlapping elements 0
+OPAL{0}> * Key: (21.655625 - 21.665518) number of overlapping elements 1
+OPAL{0}> *                              EYG5
+OPAL{0}> * Key: (21.665518 - 21.755644) number of overlapping elements 0
+OPAL{0}> 
+Ippl{0}> * Creating new file for data: 'data/input_ElementPositions.sdds'
+Ippl{0}> Saved phases in the h5 file: Cav-1-name -> LINAC_1 --- Cav-1-value -> 1.8729
+Ippl{0}> Saved phases in the h5 file: Cav-2-name -> LINAC_2 --- Cav-2-value -> 1.1436
+Ippl{0}> Saved phases in the h5 file: Cav-3-name -> LINAC_3 --- Cav-3-value -> 2.3945
+Ippl{0}> Saved phases in the h5 file: Cav-4-name -> LINAC_5 --- Cav-4-value -> 2.1094
+OPAL{0}> 
+OPAL{0}> * Track start at: 16:21:50, t= -4.360 [ps]; zstart at: 0.000 [um]
+ParallelTTracker {0}> Change dT from 1e-12 [s] to 1.74413e-14 [s] during emission 
+OPAL{0}> * Executing ParallelTTracker
+OPAL{0}> * Initial dt = 1.000 [ps]
+OPAL{0}> * Max integration steps = 2000000, next step = 0
+OPAL{0}> 
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+OPAL{0}> *****************************************************
+OPAL{0}> Warning: attempted to rebin, but not all distribution
+OPAL{0}> particles have been emitted. Rebin failed.
+OPAL{0}> *****************************************************
+ParallelTTracker {0}> 16:22:25 Step    999 at 141.957 [mm], t= 506.325 [ps], E=5.329 [MeV]
+ParallelTTracker {0}> 16:22:44 Step   1999 at 440.921 [mm], t= 1.506 [ns], E=6.416 [MeV]
+ParallelTTracker {0}> 16:23:01 Step   2999 at 739.895 [mm], t= 2.506 [ns], E=6.366 [MeV]
+ParallelTTracker {0}> 16:23:18 Step   3999 at 1.389 [m], t= 4.676 [ns], E=12.881 [MeV]
+ParallelTTracker {0}> 16:23:33 Step   4999 at 4.386 [m], t= 14.676 [ns], E=24.275 [MeV]
+ParallelTTracker {0}> 16:23:49 Step   5999 at 7.383 [m], t= 24.676 [ns], E=33.047 [MeV]
+ParallelTTracker {0}> 16:24:05 Step   6999 at 10.381 [m], t= 34.676 [ns], E=41.930 [MeV]
+ParallelTTracker {0}> 16:24:20 Step   7999 at 13.379 [m], t= 44.676 [ns], E=41.929 [MeV]
+ParallelTTracker {0}> 16:24:40 Step   8999 at 16.376 [m], t= 54.676 [ns], E=41.910 [MeV]
+ParallelTTracker {0}> 16:25:04 Step   9999 at 19.374 [m], t= 64.676 [ns], E=41.861 [MeV]
+OPAL {0}> 
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP              = 262144
+OPAL {0}> * Qtot            =        1.000 [nC]         Qi    =        3.815 [fC]
+OPAL {0}> * Ekin            =      41.794 [MeV]         dEkin =      79.910 [keV]
+OPAL {0}> * rmax            = (      4.95296 ,      4.12726 ,      2.11647 ) [mm]
+OPAL {0}> * rmin            = (     -3.89912 ,     -3.97706 ,     -2.59551 ) [mm]
+OPAL {0}> * rms beam size   = (      1.77126 ,      0.82768 ,      0.81626 ) [mm]
+OPAL {0}> * rms momenta     = (  3.78908e-02 ,  6.71193e-03 ,  1.56396e-01 ) [beta gamma]
+OPAL {0}> * mean position   = (      1.17916 ,     -0.01338 ,     -0.39073 ) [mm]
+OPAL {0}> * mean momenta    = ( -1.16124e-02 ,  6.93277e-05 ,  8.27834e+01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  6.87698e-07 ,  4.25897e-08 ,  1.45816e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  5.29593e-01 ,  7.72799e-01 ,  3.25418e-01 )
+OPAL {0}> * hr              = (    291.07780 ,    266.67702 ,    155.04277 ) [um]
+OPAL {0}> * dh              =   1.00000e+00 [%]
+OPAL {0}> * t               =       72.616 [ns]         dT    =       10.000 [ps]
+OPAL {0}> * spos            =        21.756 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL{0}> 
+OPAL{0}> * Done executing ParallelTTracker at 16:25:25
+OPAL{0}> 
+Ippl{0}> * Creating new file for data: 'input_Monitors.stat'
+OPAL{0}> * End of input stream 'input.in'
+Timings{0}> -----------------------------------------------------------------
+Timings{0}>      Timing results for 4 nodes:
+Timings{0}> -----------------------------------------------------------------
+Timings{0}> mainTimer........... Wall tot =    217.676, CPU tot =     215.91
+Timings{0}> 
+Timings{0}> Binaryrepart........ Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Boundingbox......... Wall max =    6.45883, CPU max =       6.49
+Timings{0}>                      Wall avg =    6.24729, CPU avg =     6.0675
+Timings{0}>                      Wall min =    6.09921, CPU min =       5.68
+Timings{0}> 
+Timings{0}> Boundingbox-bounds.. Wall max =    1.09391, CPU max =       1.13
+Timings{0}>                      Wall avg =    1.09218, CPU avg =       1.07
+Timings{0}>                      Wall min =    1.08991, CPU min =       1.01
+Timings{0}> 
+Timings{0}> Boundingbox-update.. Wall max =    4.67331, CPU max =       4.75
+Timings{0}>                      Wall avg =    4.67078, CPU avg =      4.545
+Timings{0}>                      Wall min =    4.66929, CPU min =       4.29
+Timings{0}> 
+Timings{0}> Compute Statistics.. Wall max =    25.2276, CPU max =       25.3
+Timings{0}>                      Wall avg =     25.167, CPU avg =      25.08
+Timings{0}>                      Wall min =    25.0957, CPU min =      24.62
+Timings{0}> 
+Timings{0}> ComputePotential.... Wall max =    50.6325, CPU max =      50.64
+Timings{0}>                      Wall avg =    50.6218, CPU avg =    50.1625
+Timings{0}>                      Wall min =    50.6117, CPU min =       49.4
+Timings{0}> 
+Timings{0}> Create Distr........ Wall max =  0.0236693, CPU max =       0.02
+Timings{0}>                      Wall avg =  0.0221739, CPU avg =       0.02
+Timings{0}>                      Wall min =  0.0216735, CPU min =       0.02
+Timings{0}> 
+Timings{0}> External field eval. Wall max =    34.1975, CPU max =      33.95
+Timings{0}>                      Wall avg =    32.2871, CPU avg =    32.0325
+Timings{0}>                      Wall min =    29.4739, CPU min =      29.05
+Timings{0}> 
+Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Histogram........... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Initialize geometry. Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Inside test......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Load Distr.......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Particle Inside..... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Ray tracing......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> SelfField total..... Wall max =    109.396, CPU max =     108.54
+Timings{0}>                      Wall avg =    108.992, CPU avg =    108.038
+Timings{0}>                      Wall min =    108.494, CPU min =     107.64
+Timings{0}> 
+Timings{0}> SF: GreensFTotal.... Wall max =    32.7128, CPU max =      32.63
+Timings{0}>                      Wall avg =    32.6433, CPU avg =    32.2825
+Timings{0}>                      Wall min =    32.5517, CPU min =      32.02
+Timings{0}> 
+Timings{0}> TIntegration1....... Wall max =    3.50627, CPU max =       3.59
+Timings{0}>                      Wall avg =    3.46189, CPU avg =       3.38
+Timings{0}>                      Wall min =    3.42487, CPU min =       3.15
+Timings{0}> 
+Timings{0}> TIntegration2....... Wall max =    9.98773, CPU max =      10.28
+Timings{0}>                      Wall avg =     9.9453, CPU avg =     9.9075
+Timings{0}>                      Wall min =    9.90102, CPU min =        9.6
+Timings{0}> 
+Timings{0}> WakeField........... Wall max =    8.28869, CPU max =       8.34
+Timings{0}>                      Wall avg =    5.50283, CPU avg =     5.4775
+Timings{0}>                      Wall min =     3.6794, CPU min =        3.7
+Timings{0}> 
+Timings{0}> Write H5-File....... Wall max =  0.0120341, CPU max =       0.01
+Timings{0}>                      Wall avg =  0.0119274, CPU avg =     0.0075
+Timings{0}>                      Wall min =  0.0118421, CPU min =          0
+Timings{0}> 
+Timings{0}> Write Stat.......... Wall max =   0.345937, CPU max =       0.33
+Timings{0}>                      Wall avg =   0.134121, CPU avg =     0.1175
+Timings{0}>                      Wall min =  0.0633893, CPU min =       0.01
+Timings{0}> 
+Timings{0}> -----------------------------------------------------------------
